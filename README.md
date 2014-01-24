@@ -1,6 +1,6 @@
 # Droplist Plugin for jQuery
 
-Droplist is a tiny (1k minified) plugin that converts a breadcrumb trail or folder tree (or any `<ul>`) in to a dynamic dropdown menu, but only when you've run out of horizontal space.
+Droplist is a tiny (2k minified) plugin that converts a breadcrumb trail or folder tree (or any `<ul>` for that matter) in to a dynamic dropdown menu, but only when you've run out of horizontal space.
 
 ## Demo
 
