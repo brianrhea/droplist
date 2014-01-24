@@ -8,8 +8,6 @@
             dropicon: "caret"
         }, options );
 
-        console.log(settings.dropicon);
-
         if ( settings.dropicon !== "caret" ) {
         	settings.dropicon = "fa " + settings.dropicon;
         }
@@ -51,13 +49,13 @@
 						$(this).prepend('<li class=\"droplist-ellipsis\">' + settings.ellipsis + '</li>');
 					}
 
-					$(this).prepend('<li class=\"droplist-dropdown dropdown\"><a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><i class=\"' + settings.dropicon + '\"></i></a><ul class=\"dropdown-menu\"></ul></li>');
+					$(this).prepend('<li class=\"droplist-dropdown\"><a href=\"javascript:void(0);\" class=\"droplist-toggle\" data-toggle=\"droplist\"><i class=\"' + settings.dropicon + '\"></i></a><ul class=\"droplist-menu\"></ul></li>');
 
 					_.each(hiddenChildren, function(hiddenChild){
 						html.push(hiddenChild.outerHTML);
 					})
 
-					$(this).find('.dropdown-menu').append( html.join('') );
+					$(this).find('.droplist-menu').append( html.join('') );
 				}
 
 			} else {
@@ -84,13 +82,13 @@
 						$(this).append('<li class=\"droplist-ellipsis\">' + settings.ellipsis + '</li>');
 					}
 
-					$(this).append('<li class=\"droplist-dropdown dropdown\"><a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><i class=\"' + settings.dropicon + '\"></i></a><ul class=\"dropdown-menu\"></ul></li>');
+					$(this).append('<li class=\"droplist-dropdown\"><a href=\"javascript:void(0);\" class=\"droplist-toggle\" data-toggle=\"droplist\"><i class=\"' + settings.dropicon + '\"></i></a><ul class=\"droplist-menu\"></ul></li>');
 
 					_.each(hiddenChildren, function(hiddenChild){
 						html.push(hiddenChild.outerHTML);
 					})
 
-					$(this).find('.dropdown-menu').append( html.join('') );
+					$(this).find('.droplist-menu').append( html.join('') );
 				}
 
 			}
@@ -99,3 +97,18 @@
 	};
 
 }( jQuery ));
+
+$('.droplist').on('click', '.droplist-dropdown', function(e){
+	if ( $(this).hasClass('open') ) {
+		$(this).find('.droplist-menu').fadeOut();
+		$(this).removeClass('open');
+	} else {
+		$(this).find('.droplist-menu').fadeIn();
+		$(this).addClass('open');
+		e.stopPropagation();
+	}
+});
+
+$(document).click(function(){
+	$(this).find('.droplist-menu').fadeOut();
+});

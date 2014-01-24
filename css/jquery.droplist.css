@@ -1,10 +1,54 @@
 .droplist {
+	list-style: none outside none;
+	padding-left: 0;
 	white-space: nowrap;
 	width: 235px;
 	margin-left: 5px;
-	li {
-		padding: 0 2px;
-	}
+
+}
+
+.droplist > li {
+	display: inline-block;
+	padding: 0 2px;
+}
+
+.droplist-menu {
+	display: none;
+	background-clip: padding-box;
+	background-color: #FFFFFF;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+	display: none;
+	float: left;
+	font-size: 14px;
+	left: 0;
+	list-style: none outside none;
+	margin: 2px 0 0;
+	min-width: 160px;
+	padding: 5px 0;
+	position: absolute;
+	top: 100%;
+	z-index: 1000;
+}
+
+.droplist-menu > li > a {
+	clear: both;
+	color: #333333;
+	display: block;
+	font-weight: normal;
+	line-height: 1.42857;
+	padding: 3px 20px;
+	white-space: nowrap;
+}
+
+.droplist-menu > li > a:hover {
+	text-decoration: none;
+	background-color: #eee;
+}
+
+.droplist-dropdown {
+	position: relative;
 }
 
 .droplist-dropdown .caret {
