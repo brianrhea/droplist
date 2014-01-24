@@ -61,12 +61,10 @@ options: 'fa-toggle-down', 'fa-toggle-right', 'fa-plus-square', etc
 The following code tells Droplist to overflow on the right, hide the ellipsis, and use Font Awesome's fa-toggle-right icon as the dropdown.
 
 ```javascript
-$(document).ready(function(){
-  $('.droplist').droplist({
-    overflow: 'right',
-    ellipsis: false,
-    dropicon: 'fa-toggle-right'
-  });
+$('.droplist').droplist({
+  overflow: 'right',
+  ellipsis: false,
+  dropicon: 'fa-toggle-right'
 });
 ```
 
