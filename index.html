@@ -1,81 +1,85 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Fixed Top Navbar Example for Bootstrap</title>
+		<title>Droplist | jQuery Plugin for Breadcrumbs, Directory Trees, or Whatever Else You May Think Of</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="prettify/prettify.css" rel="stylesheet">
+		<link href="css/jquery.droplist.css" rel="stylesheet">
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+		<link href="css/demo.css" rel="stylesheet">
 
-  </head>
+	</head>
 
-  <body>
+	<body>
 
-    <!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="../navbar/">Default</a></li>
-            <li><a href="../navbar-static-top/">Static top</a></li>
-            <li class="active"><a href="./">Fixed top</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
+		<div class="jumbotron">
+			<i class="bug white fa fa-toggle-down"></i>
+			<h1 class="white">Droplist</h1>
+			<p class="white">a jQuery plugin for breadcrumbs, directory trees,<br />or whatever else you may think of.</p>
+			<a href="https://github.com/brianrhea/droplist" class="btn btn-default">Download from GitHub</a>
+		</div>
 
-    <div class="container">
+		<div class="container">
 
-      <!-- Main component for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <h1>Navbar example</h1>
-        <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-        <p>To see the difference between static and fixed top navbars, just scroll.</p>
-        <p>
-          <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
-        </p>
-      </div>
+			<div class="col-sm-8 col-sm-offset-2">
 
-    </div> <!-- /container -->
+					<div class="page-header">
+						<h1>Overview</h1>
+						<p class="lead">Often, to preserve vertical space, you want your breadcrumbs to be on one line. But, what if your design dictates that you need the breadcrumb in a narrow column and you're short on horizontal space?</p>
+						<p class="lead">Droplist allows you to hide the overflowing crumbs and then makes them available via a dropdown menu which you can customize.</p>
+					</div>
+
+					<h3>Examples</h3>
+
+					<ul class="droplist" style="width: 250px">
+						<li><a href="#">Mocavo Co</a></li>
+						<li><a href="#">Divisions</a></li>
+						<li><a href="#">Revve</a></li>
+						<li><a href="#">Search Designs</a></li>
+						<li><a href="#">SERP</a></li>
+						<li><a href="#">Versions</a></li>
+						<li><a href="#">Killing It</a></li>
+					</ul>
+
+					<pre class="prettyprint">
+
+		(function ( $ ) {
+
+			$.fn.droplist = function(options) {
+
+				var settings = $.extend({
+					overflow: "left",
+		            ellipsis: "&#8230;",
+		            dropicon: "caret"
+		        }, options );
+
+					</pre>
+			</div>
+
+		</div>
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-  </body>
+		<!-- Bootstrap core JavaScript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+		<script src="js/jquery.droplist.js"></script>
+		<script src="prettify/prettify.js"></script>
+		<script>
+
+			$(document).ready(function() {
+				prettyPrint();
+				$( ".droplist" ).droplist({
+					dropicon: "fa-toggle-down"
+				});
+			});
+
+		</script>
+	</body>
 </html>

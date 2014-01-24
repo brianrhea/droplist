@@ -1,0 +1,106 @@
+.jumbotron {
+	text-align: center;
+	background-color: #3498db;
+	margin-bottom: 0;
+}
+
+h1 {
+	margin-top: 0;
+	margin-bottom: 30px;
+}
+
+.bug {
+	font-size: 120px;
+	color: #999;
+}
+
+.btn-default {
+	background-color: #3498db;
+	color: #fff;
+	border: 2px solid #fff;
+	margin-top: 20px;
+}
+
+.white {
+	color: #fff !important;
+}
+
+.turquoise {
+    color: #1abc9c !important;
+}
+
+.green-sea {
+    color: #16a085 !important;
+}
+
+.emerald {
+    color: #2ecc71 !important;
+}
+
+.nephritis {
+    color: #27ae60 !important;
+}
+
+.peter-river {
+    color: #3498db !important;
+}
+
+.belize-hole {
+    color: #2980b9 !important;
+}
+
+.amethyst {
+    color: #9b59b6 !important;
+}
+
+.wisteria {
+    color: #8e44ad !important;
+}
+
+.wet-asphalt {
+    color: #34495e !important;
+}
+
+.midnight-blue {
+    color: #2c3e50 !important;
+}
+
+.sun-flower {
+    color: #f1c40f !important;
+}
+
+.orange {
+    color: #f39c12 !important;
+}
+
+.carrot {
+    color: #e67e22 !important;
+}
+
+.pumpkin {
+    color: #d35400 !important;
+}
+
+.alizarin {
+    color: #e74c3c !important;
+}
+
+.pomegranate {
+    color: #c0392b !important;
+}
+
+.clouds {
+    color: #ecf0f1 !important;
+}
+
+.silver {
+    color: #bdc3c7 !important;
+}
+
+.concrete {
+    color: #95a5a6 !important;
+}
+
+.asbestos {
+    color: #7f8c8d !important;
+}
