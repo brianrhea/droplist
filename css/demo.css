@@ -1,6 +1,6 @@
 .jumbotron {
 	text-align: center;
-	background-color: #3498db;
+	background-color: #27ae60;
 	margin-bottom: 0;
 }
 
@@ -15,10 +15,14 @@ h1 {
 }
 
 .btn-default {
-	background-color: #3498db;
+	background-color: #27ae60;
 	color: #fff;
 	border: 2px solid #fff;
 	margin-top: 20px;
+}
+
+pre.prettyprint {
+    padding: 12px;
 }
 
 .white {

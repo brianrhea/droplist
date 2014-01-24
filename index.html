@@ -28,37 +28,129 @@
 
 			<div class="col-sm-8 col-sm-offset-2">
 
-					<div class="page-header">
-						<h1>Overview</h1>
-						<p class="lead">Often, to preserve vertical space, you want your breadcrumbs to be on one line. But, what if your design dictates that you need the breadcrumb in a narrow column and you're short on horizontal space?</p>
-						<p class="lead">Droplist allows you to hide the overflowing crumbs and then makes them available via a dropdown menu which you can customize.</p>
-					</div>
+				<div class="page-header">
+					<h1>Overview</h1>
+					<p class="lead">Often, to preserve vertical space, you want your breadcrumbs to be on one line. But, what if your design dictates that you need the breadcrumb in a narrow column and you're short on horizontal space?</p>
+					<p class="lead">Droplist allows you to hide the overflowing crumbs and then makes them available to your visitor via a dropdown menu.</p>
+				</div>
 
-					<h3>Examples</h3>
+				<h3>Examples</h3>
 
-					<ul class="droplist" style="width: 250px">
-						<li><a href="#">Mocavo Co</a></li>
-						<li><a href="#">Divisions</a></li>
-						<li><a href="#">Revve</a></li>
-						<li><a href="#">Search Designs</a></li>
-						<li><a href="#">SERP</a></li>
-						<li><a href="#">Versions</a></li>
-						<li><a href="#">Killing It</a></li>
+				<p>Droplist turns this:</p>
+
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Tech</a></li>
+					<li><a href="#">Apps &amp; Software</a></li>
+					<li><a href="#">What's New</a></li>
+					<li>Knock to Unlock</a></li>
+				</ul>
+
+				<p>In to this:</p>
+
+				<ul class="droplist" id="dl-default" style="width: 300px">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Tech</a></li>
+					<li><a href="#">Apps &amp; Software</a></li>
+					<li><a href="#">What's New</a></li>
+					<li>Knock to Unlock</a></li>
+				</ul>
+
+				<div class="page-header">
+
+					<h4>Default</h4>
+
+					<pre class="prettyprint">
+$( ".droplist" ).droplist();</pre>
+
+				</div>
+
+				<div class="page-header">
+
+					<h4>Overflow on the Right</h4>
+
+					<p>If you'd rather hide the elements at the end of your list; just pass the <code>overflow</code> option with a value of <code>right</code>.</p>
+
+					<ul class="droplist" id="dl-overflow" style="width: 300px">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Tech</a></li>
+						<li><a href="#">Apps &amp; Software</a></li>
+						<li><a href="#">What's New</a></li>
+						<li>Knock to Unlock</a></li>
 					</ul>
 
 					<pre class="prettyprint">
+$( ".droplist" ).droplist({
+  overflow: 'right'
+});</pre>
 
-		(function ( $ ) {
+				</div>
 
-			$.fn.droplist = function(options) {
+				<div class="page-header">
 
-				var settings = $.extend({
-					overflow: "left",
-		            ellipsis: "&#8230;",
-		            dropicon: "caret"
-		        }, options );
+					<h4>Ellipsis</h4>
 
-					</pre>
+					<p>You can also either hide the ellipsis by passing <code>ellipsis: false</code></p>
+
+					<ul class="droplist" id="dl-ellipsis-false" style="width: 300px">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Tech</a></li>
+						<li><a href="#">Apps &amp; Software</a></li>
+						<li><a href="#">What's New</a></li>
+						<li>Knock to Unlock</a></li>
+					</ul>
+
+					<pre class="prettyprint">
+$( ".droplist" ).droplist({
+  ellipsis: false
+});</pre>
+
+					<p>or replace the default <code>&#8230;</code> with a symbol of your choosing like so: <code>ellipsis: '&amp;raquo;'</code>.</p>
+<ul class="droplist" id="dl-ellipsis-raquo" style="width: 300px">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Tech</a></li>
+						<li><a href="#">Apps &amp; Software</a></li>
+						<li><a href="#">What's New</a></li>
+						<li>Knock to Unlock</a></li>
+					</ul>
+
+					<pre class="prettyprint">
+$( ".droplist" ).droplist({
+  ellipsis: '&amp;raquo;'
+});</pre>
+
+				</div>
+
+				<div class="page-header">
+
+					<h4>Dropicon</h4>
+
+					<p>But most likely, that boring caret is getting on your nerves and you want to override it. If you're using the <a href="http://fontawesome.io">Font Awesome</a> icon library, it's as simple passing in the icon class of your choice like so:</p>
+
+					<ul class="droplist" id="dl-dropicon" style="width: 300px">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Tech</a></li>
+						<li><a href="#">Apps &amp; Software</a></li>
+						<li><a href="#">What's New</a></li>
+						<li>Knock to Unlock</a></li>
+					</ul>
+
+					<pre class="prettyprint">
+$( ".droplist" ).droplist({
+  dropicon: 'fa-toggle-down'
+});</pre>
+
+				</div>
+
+				<h3>Acknowledgements</h3>
+
+				<p>Big ups to the very talented <a href="http://www.bmwagner.com/">Brett Wagner</a> for the inspiration and UI design. We both hope this plugin makes your day a little easier.</p>
+
+				<h3>License</h3>
+
+				<p>All code licensed under the <a href="http://www.opensource.org/licenses/mit-license.php">MIT License</a>. In other words you are basically free to do whatever you want. Please don't remove my name from the source code, but who does that anyway?</p>
+
+
 			</div>
 
 		</div>
@@ -75,8 +167,18 @@
 
 			$(document).ready(function() {
 				prettyPrint();
-				$( ".droplist" ).droplist({
-					dropicon: "fa-toggle-down"
+				$( "#dl-default" ).droplist();
+				$( "#dl-overflow" ).droplist({
+					overflow: 'right'
+				});
+				$( "#dl-ellipsis-false" ).droplist({
+					ellipsis: false
+				});
+				$( "#dl-ellipsis-raquo" ).droplist({
+					ellipsis: '&raquo;'
+				});
+				$( "#dl-dropicon" ).droplist({
+					dropicon: 'fa-toggle-down'
 				});
 			});
 
