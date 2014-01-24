@@ -7,6 +7,17 @@
 	}
 }
 
+.droplist-dropdown .caret {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	margin-left: 2px;
+	vertical-align: middle;
+	border-top: 6px solid;
+	border-right: 6px solid transparent;
+	border-left: 6px solid transparent;
+}
+
 .droplist-left > li:before {
 	content: "\203A";
 	position: relative;

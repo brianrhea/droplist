@@ -5,8 +5,14 @@
 		var settings = $.extend({
 			overflow: "left",
             ellipsis: "&#8230;",
-            dropicon: "fa-toggle-down"
+            dropicon: "caret"
         }, options );
+
+        console.log(settings.dropicon);
+
+        if ( settings.dropicon !== "caret" ) {
+        	settings.dropicon = "fa " + settings.dropicon;
+        }
 
 		this.each(function(){
 			var createDropList			= false;
@@ -45,7 +51,7 @@
 						$(this).prepend('<li class=\"droplist-ellipsis\">' + settings.ellipsis + '</li>');
 					}
 
-					$(this).prepend('<li class=\"droplist-dropdown dropdown\"><a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><i class=\"fa ' + settings.dropicon + '\"></i></a><ul class=\"dropdown-menu\"></ul></li>');
+					$(this).prepend('<li class=\"droplist-dropdown dropdown\"><a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><i class=\"' + settings.dropicon + '\"></i></a><ul class=\"dropdown-menu\"></ul></li>');
 
 					_.each(hiddenChildren, function(hiddenChild){
 						html.push(hiddenChild.outerHTML);
@@ -78,7 +84,7 @@
 						$(this).append('<li class=\"droplist-ellipsis\">' + settings.ellipsis + '</li>');
 					}
 
-					$(this).append('<li class=\"droplist-dropdown dropdown\"><a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><i class=\"fa ' + settings.dropicon + '\"></i></a><ul class=\"dropdown-menu\"></ul></li>');
+					$(this).append('<li class=\"droplist-dropdown dropdown\"><a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><i class=\"' + settings.dropicon + '\"></i></a><ul class=\"dropdown-menu\"></ul></li>');
 
 					_.each(hiddenChildren, function(hiddenChild){
 						html.push(hiddenChild.outerHTML);
