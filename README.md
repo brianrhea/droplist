@@ -12,7 +12,7 @@ Examples available at [brianrhea.github.io/droplist](http://brianrhea.github.io/
  - As well as the css: `/path/to/jquery.droplist.min.css`
  - Droplist uses Underscore.js, so if you're not already using it, be sure to include it as well. `//cdnjs.cloudflare.com/ajax/libs/underscore-contrib/0.1.4/underscore-contrib.min.js`
  - Add `droplist` as a class to any `<ul>` in the document
- - Specify a max-width for the `<ul class="droplist">` in your own css source, i.e.:
+ - Specify a width for the `<ul class="droplist">` in your own css source, i.e.:
 
 ```css
 .droplist {
