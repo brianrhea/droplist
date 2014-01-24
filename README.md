@@ -48,7 +48,7 @@ options: 'string', false
 
 **dropicon**
 
-If you're using the [Font Awesome](http://fontawesome.io) icon library, Droplist allows you to pass in a font-awesome class that will be used for the dropdown icon. If you aren't using FA, don't worry, Droplist defaults to false. If you are, and want to use a particular icon, just pass the [icon class](http://fontawesome.io/icons/) and Droplist will take care of the rest.
+If you're using the [Font Awesome](http://fontawesome.io) icon library, Droplist allows you to pass in a font-awesome class that will be used for the dropdown icon. If you aren't using FA, don't worry, Droplist defaults to false and will use a caret. If you are, and want to use a particular icon, just pass the [icon class](http://fontawesome.io/icons/) and Droplist will take care of the rest.
 
 ```
 default: false
