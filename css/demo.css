@@ -21,8 +21,13 @@ h1 {
 	margin-top: 20px;
 }
 
+.droplist {
+    margin: 30 0;
+}
+
 pre.prettyprint {
     padding: 12px;
+    margin: 30 0;
 }
 
 .white {
