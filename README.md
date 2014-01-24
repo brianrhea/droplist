@@ -68,6 +68,10 @@ $('.droplist').droplist({
 });
 ```
 
+## Acknowledgements
+
+Big ups to the very talented [Brett Wagner](http://www.bmwagner.com/) for the inspiration and UI design. We both hope this plugin makes your day a little easier.
+
 ## License
 
 All code licensed under the [MIT License](http://www.opensource.org/licenses/mit-license.php). In other words you are basically free to do whatever you want. Please don't remove my name from the source code, but who does that anyway?
