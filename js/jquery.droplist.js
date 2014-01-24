@@ -25,9 +25,12 @@
 				childrenWithWidths.push([child, $(child).outerWidth()]);
 			});
 
+			console.log(this);
+			console.log(settings);
+
 			if ( settings.overflow === "left" ) {
 
-				$('.droplist').addClass('droplist-left');
+				$(this).addClass('droplist-left');
 
 				if ( childrenWidthTotal > width ) {
 					childrenWidthTotal = 0;
@@ -36,6 +39,8 @@
 						if ( childrenWidthTotal > width ) {
 							hiddenChildren.push(childrenWithWidths[i][0]);
 							$(childrenWithWidths[i][0]).remove();
+							var n = i + 1;
+							$(childrenWithWidths[n][0]).addClass('no-before');
 							createDropList = true;
 						}
 					}
@@ -60,7 +65,7 @@
 
 			} else {
 
-				$('.droplist').addClass('droplist-right');
+				$(this).addClass('droplist-right');
 
 				if ( childrenWidthTotal > width ) {
 					childrenWidthTotal = 0;
@@ -69,6 +74,8 @@
 						if ( childrenWidthTotal > width ) {
 							hiddenChildren.push(childrenWithWidths[i][0]);
 							$(childrenWithWidths[i][0]).remove();
+							var n = i - 1;
+							$(childrenWithWidths[n][0]).addClass('no-after');
 							createDropList = true;
 						}
 					}

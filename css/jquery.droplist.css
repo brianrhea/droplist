@@ -2,9 +2,15 @@
 	list-style: none outside none;
 	padding-left: 0;
 	white-space: nowrap;
-	width: 235px;
 	margin-left: 5px;
+}
 
+.droplist a {
+	color: #428BCA;
+    text-decoration: none;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.428571429;
 }
 
 .droplist > li {
@@ -32,6 +38,7 @@
 	z-index: 1000;
 }
 
+.droplist-menu > li,
 .droplist-menu > li > a {
 	clear: both;
 	color: #333333;
@@ -80,6 +87,8 @@
 	color: #999;
 }
 
+.droplist .no-before:before,
+.droplist .no-after:after,
 .droplist .droplist-ellipsis:before,
 .droplist .droplist-dropdown:before,
 .droplist .droplist-ellipsis:after,
