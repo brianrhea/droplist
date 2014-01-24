@@ -25,9 +25,6 @@
 				childrenWithWidths.push([child, $(child).outerWidth()]);
 			});
 
-			console.log(this);
-			console.log(settings);
-
 			if ( settings.overflow === "left" ) {
 
 				$(this).addClass('droplist-left');
